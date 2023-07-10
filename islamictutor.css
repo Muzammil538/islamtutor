@@ -16,6 +16,7 @@
 
   & .menu-icon-container, .menu-icon-container > i {
     font-size: 26px;
+    color: #969;
   }
 
 }
