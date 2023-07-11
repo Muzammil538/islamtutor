@@ -14,6 +14,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  background-color: #00ADB5;
   & .navbar {
     padding: 10px 10px;
     display: flex;
@@ -21,10 +22,16 @@ header {
     align-items: center;
     width: 100%;
     height: 50px;
+    color: #fff;
   
     & .menu-icon-container, .menu-icon-container > i {
       font-size: 26px;
-      color: #969;
+      color: #FFC7C7;
+    }
+    & .search-container > i{
+      font-size: 20px;
+      color: #FFC7C7;
+
     }
   
   }
@@ -37,34 +44,102 @@ header {
     flex-direction: column;
     gap: 20px;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
+    background-color: #71C9CE;
+    min-height: 150px;
     & .link {
       text-decoration: none;
-      color: #111;
+      color: #fff;
     }
   }
-  & .header_form {
+  & .header_form{
+    display: none;
+  }
+  & .header_form.active {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
+    padding: 20px;
+    background-color: #71C9CE;
+
 
     & input{
       width: 80%;
       padding: 8px;
       outline: none;
       border: none;
-      border-bottom: 2px solid #1111;
+      border-radius: 10px;
+      border-bottom: 2px solid transparent;
+      box-shadow: 0px 20px 20px -70px #fff1;
     }
     & input:focus {
       border-bottom-color: #111;
+      border-radius: 0px;
     }
     & button {
       padding: 10px;
       border: none;
       outline: none;
       border-radius: 50%;
+    }
+  }
+}
+
+main {
+  & .banner {
+    background-image: url("./Images/logo.png");
+    width: 100%;
+    height: 250px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  & .info {
+    padding: 30px;
+    text-align: justify;
+    & * {
+      margin-bottom: 10px;
+    }
+  }
+  & .products {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    justify-self: center;
+    align-self: center;
+    row-gap: 30px;
+
+    & .card {
+      border: 2px solid #19ADA9;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0px 25px 30px -20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+
+      & .card-img > img{
+        background-size: cover;
+      }
+      & .card-body {
+        & * {
+          margin-bottom: 15px;
+          padding: 10px;
+          text-decoration: none;
+          color: #000;
+          text-align: center;
+        }
+        & .btn {
+          background-color: #0066fe;
+          border-radius: 8px;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
     }
   }
 }
