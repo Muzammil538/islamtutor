@@ -73,10 +73,6 @@ header {
       border-bottom: 2px solid transparent;
       box-shadow: 0px 20px 20px -70px #fff1;
     }
-    & input:focus {
-      border-bottom-color: #111;
-      border-radius: 0px;
-    }
     & button {
       padding: 10px;
       border: none;
@@ -204,13 +200,10 @@ main {
         outline: none;
         border: none;
         border-radius: 10px;
-        border-bottom: 2px solid transparent;
+        /* border-bottom: 2px solid transparent; */
         box-shadow: 0px 20px 20px -70px #fff1;
       }
-      & input:focus {
-        border-bottom-color: #111;
-        border-radius: 0px;
-      }
+
       & button {
         padding: 10px;
         border: none;
